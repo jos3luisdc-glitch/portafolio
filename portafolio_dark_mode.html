@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Luis DC | Desarrollador Web</title>
+    <!-- Cargamos Tailwind CSS para los estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Cargamos Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Phosphor Icons (Ligeros y modernos) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        // Configuración personalizada para Tailwind (Colores neón)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0f172a',    // Slate 900
+                        cardBg: '#1e293b',    // Slate 800
+                        neonCyan: '#06b6d4',  // Cyan 500
+                        neonPurple: '#a855f7' // Purple 500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efecto de brillo de fondo para la sección Hero */
+        .hero-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(6,182,212,0.3) 0%, rgba(15,23,42,0) 70%);
+            top: -50px;
+            left: -50px;
+            z-index: -1;
+            filter: blur(40px);
+        }
+        .hero-glow-2 {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(168,85,247,0.2) 0%, rgba(15,23,42,0) 70%);
+            bottom: 10%;
+            right: -50px;
+            z-index: -1;
+            filter: blur(40px);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-300 font-sans antialiased overflow-x-hidden relative">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-darkBg/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-white tracking-wider">
+                        JL<span class="text-neonCyan">.</span>DC
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="hover:text-neonCyan transition-colors px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#sobre-mi" class="hover:text-neonCyan transition-colors px-3 py-2 rounded-md text-sm font-medium">Sobre Mí</a>
+                        <a href="#proyectos" class="hover:text-neonCyan transition-colors px-3 py-2 rounded-md text-sm font-medium">Proyectos</a>
+                        <a href="#cpp" class="hover:text-neonCyan transition-colors px-3 py-2 rounded-md text-sm font-medium">C++</a>
+                        <a href="#contacto" class="border border-neonCyan text-neonCyan hover:bg-neonCyan hover:text-white transition-all px-4 py-2 rounded-full text-sm font-medium ml-4">Contactar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Inicio) -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen">
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left flex flex-col md:flex-row items-center">
+            
+            <div class="md:w-3/5 md:pr-12">
+                <p class="text-neonCyan font-semibold tracking-wide mb-2">Hola, mi nombre es</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                    Jose Luis DC. <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-neonPurple">
+                        Construyo soluciones digitales.
+                    </span>
+                </h1>
+                <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto md:mx-0">
+                    Estudiante de Ingeniería en Sistemas y Desarrollador Web. Me especializo en fusionar código eficiente con interfaces atractivas, creando desde plataformas web hasta sistemas integrados con hardware.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#proyectos" class="bg-neonCyan text-darkBg font-bold px-8 py-3 rounded-full hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all flex items-center justify-center gap-2">
+                        Ver mi trabajo <i class="ph ph-arrow-right font-bold"></i>
+                    </a>
+                    <a href="#contacto" class="bg-transparent border border-slate-600 text-white font-medium px-8 py-3 rounded-full hover:border-neonPurple hover:text-neonPurple transition-all">
+                        Hablemos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gráfico decorativo abstracto para el hero -->
+            <div class="md:w-2/5 mt-12 md:mt-0 hidden md:block">
+                <div class="relative w-full aspect-square max-w-md mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-neonCyan to-neonPurple rounded-full opacity-20 blur-2xl animate-pulse"></div>
+                    <div class="absolute inset-4 bg-cardBg rounded-3xl border border-slate-700 flex items-center justify-center rotate-3 hover:rotate-0 transition-transform duration-500 shadow-xl overflow-hidden">
+                         <i class="ph ph-code text-9xl text-slate-600 opacity-50"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="py-20 bg-darkBg/50 border-y border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="md:w-1/2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">Sobre Mí</h2>
+                        <div class="h-px bg-slate-700 flex-grow"></div>
+                    </div>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Actualmente curso la carrera de <strong>Ingeniería en Sistemas</strong>, lo que me ha dado una base sólida en algoritmia, lógica de programación y resolución de problemas complejos.
+                    </p>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Mi enfoque principal es el <strong>Desarrollo Web</strong>, pero mi formación de ingeniero me permite integrar hardware y software para crear soluciones integrales, desde un sensor Arduino hasta una interfaz web responsiva.
+                    </p>
+                    
+                    <h3 class="text-white font-semibold mb-3"><i class="ph ph-terminal text-neonCyan mr-2"></i>Tecnologías que manejo:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cardBg border border-slate-700 rounded-full text-sm text-cyan-300">HTML & CSS</span>
+                        <span class="px-3 py-1 bg-cardBg border border-slate-700 rounded-full text-sm text-yellow-300">JavaScript</span>
+                        <span class="px-3 py-1 bg-cardBg border border-slate-700 rounded-full text-sm text-blue-400">C++ / C</span>
+                        <span class="px-3 py-1 bg-cardBg border border-slate-700 rounded-full text-sm text-teal-400">Arduino</span>
+                        <span class="px-3 py-1 bg-cardBg border border-slate-700 rounded-full text-sm text-purple-400">Python</span>
+                        <span class="px-3 py-1 bg-cardBg border border-slate-700 rounded-full text-sm text-pink-400">Diseño UI/UX</span>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 w-full">
+                    <!-- Decoración estilo terminal -->
+                    <div class="bg-cardBg rounded-xl border border-slate-700 overflow-hidden shadow-2xl">
+                        <div class="bg-slate-800 px-4 py-2 flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="ml-2 text-xs text-slate-400 font-mono">alumno@sistemas: ~</span>
+                        </div>
+                        <div class="p-6 font-mono text-sm text-slate-300">
+                            <p><span class="text-neonCyan">joseluis</span><span class="text-white">@portfolio</span> <span class="text-neonPurple">~/habilidades</span> $ status</p>
+                            <p class="mt-2 text-green-400">> Cargando perfil de ingeniero...</p>
+                            <p class="text-slate-400">> Lógica estructurada: [OK]</p>
+                            <p class="text-slate-400">> Creatividad visual: [OK]</p>
+                            <p class="text-slate-400">> Ganas de programar: [100%]</p>
+                            <p class="mt-4 text-neonCyan animate-pulse">_</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="py-20 bg-darkBg relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold text-white">Proyectos Destacados</h2>
+                <div class="h-px bg-slate-700 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1: Medical Suite -->
+                <div class="bg-cardBg rounded-xl border border-slate-700 overflow-hidden hover:border-neonCyan hover:-translate-y-2 transition-all duration-300 group shadow-lg">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                        <img src="IMC.jpeg" alt="Medical Suite" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neonCyan transition-colors">Medical Suite</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">Aplicación web con herramientas y calculadoras médicas (IMC, dosis pediátrica). Enfocada en la utilidad y experiencia del usuario para profesionales de la salud.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono text-neonCyan bg-neonCyan/10 px-2 py-1 rounded">JavaScript</span>
+                            <span class="text-xs font-mono text-neonCyan bg-neonCyan/10 px-2 py-1 rounded">Web App</span>
+                        </div>
+                        <a href="#" class="text-sm text-neonCyan font-medium hover:underline inline-flex items-center">
+                            Ver detalles <i class="ph ph-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Arduino -->
+                <div class="bg-cardBg rounded-xl border border-slate-700 overflow-hidden hover:border-neonPurple hover:-translate-y-2 transition-all duration-300 group shadow-lg">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                        <img src="https://placehold.co/600x400/0f172a/a855f7?text=Monitoreo+Arduino" alt="Monitoreo Ambiental" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neonPurple transition-colors">Monitoreo Ambiental</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">Sistema integrado con hardware (Arduino) y sensores para el monitoreo en tiempo real de temperatura y parámetros físicos en aulas estudiantiles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono text-neonPurple bg-neonPurple/10 px-2 py-1 rounded">C++ / Arduino</span>
+                            <span class="text-xs font-mono text-neonPurple bg-neonPurple/10 px-2 py-1 rounded">Hardware</span>
+                        </div>
+                        <a href="#" class="text-sm text-neonPurple font-medium hover:underline inline-flex items-center">
+                            Ver detalles <i class="ph ph-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Diseño UI -->
+                <div class="bg-cardBg rounded-xl border border-slate-700 overflow-hidden hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 group shadow-lg">
+                    <div class="h-48 bg-slate-800 relative overflow-hidden flex items-center justify-center border-b border-slate-700">
+                        <img src="https://placehold.co/600x400/0f172a/3b82f6?text=Dise%C3%B1o+UI" alt="Diseño Digital" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-500 transition-colors">Interfaces y UI</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">Creación de interfaces gráficas interactivas y material digital (como invitaciones), combinando diseño visual atractivo con maquetación web responsiva.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">HTML/CSS</span>
+                            <span class="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">UI/UX</span>
+                        </div>
+                        <a href="#" class="text-sm text-blue-500 font-medium hover:underline inline-flex items-center">
+                            Ver detalles <i class="ph ph-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección C++ y Algoritmia -->
+    <section id="cpp" class="py-20 bg-darkBg/50 border-t border-slate-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <!-- Editor de código falso -->
+                <div class="md:w-1/2 w-full order-2 md:order-1">
+                    <div class="bg-[#1e1e1e] rounded-xl border border-slate-700 overflow-hidden shadow-2xl">
+                        <div class="bg-[#2d2d2d] px-4 py-2 flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="ml-2 text-xs text-slate-400 font-mono">main.cpp</span>
+                        </div>
+                        <div class="p-6 font-mono text-sm sm:text-base overflow-x-auto">
+<pre class="text-slate-300"><code><span class="text-pink-500">#include</span> <span class="text-green-400">&lt;iostream&gt;</span>
+<span class="text-pink-500">#include</span> <span class="text-green-400">&lt;vector&gt;</span>
+
+<span class="text-blue-400">int</span> <span class="text-yellow-200">main</span>() {
+    <span class="text-blue-400">std</span>::<span class="text-blue-400">cout</span> &lt;&lt; <span class="text-orange-300">"Optimizando algoritmos..."</span> &lt;&lt; <span class="text-blue-400">std</span>::<span class="text-blue-400">endl</span>;
+    
+    <span class="text-slate-500">// Preparación para programación competitiva</span>
+    <span class="text-blue-400">bool</span> isReady <span class="text-pink-500">=</span> <span class="text-purple-400">true</span>;
+    
+    <span class="text-pink-500">return</span> <span class="text-purple-400">0</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto descriptivo -->
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <h2 class="text-3xl font-bold text-white">C++ & Algoritmia</h2>
+                        <div class="h-px bg-slate-700 flex-grow"></div>
+                    </div>
+                    <p class="text-slate-400 mb-4 leading-relaxed">
+                        Como estudiante de Ingeniería en Sistemas, tengo un fuerte enfoque en el desarrollo de software a nivel de sistema y la <strong>programación competitiva</strong>.
+                    </p>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Utilizo C++ para resolver problemas algorítmicos complejos, optimizar el uso de memoria (punteros) y desarrollar lógica de alta velocidad.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-slate-300">
+                            <i class="ph ph-check-circle text-neonCyan mt-1 mr-3 text-lg"></i>
+                            <span>Estructuras de Datos (Árboles, Grafos, Vectores).</span>
+                        </li>
+                        <li class="flex items-start text-slate-300">
+                            <i class="ph ph-check-circle text-neonCyan mt-1 mr-3 text-lg"></i>
+                            <span>Optimización de Complejidad Temporal O(N) y Espacial.</span>
+                        </li>
+                        <li class="flex items-start text-slate-300">
+                            <i class="ph ph-check-circle text-neonCyan mt-1 mr-3 text-lg"></i>
+                            <span>Programación Orientada a Objetos (POO).</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO -->
+<section id="contacto" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">¿Listo para crear algo increíble?</h2>
+        <p class="text-slate-400 mb-10 text-lg">Actualmente estoy disponible para nuevos proyectos freelance, desarrollo web y oportunidades profesionales. ¡Hablemos de tu próxima idea!</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <!-- Botón de Correo -->
+            <!-- CAMBIA "tu-correo@gmail.com" por tu correo real -->
+            <a href="mailto:jos3luisdc@gmail.com" class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-lg transition-colors shadow-lg shadow-cyan-500/25">
+                Enviarme un Correo
+            </a>
+            
+            <!-- Botón de WhatsApp -->
+            <!-- CAMBIA "521234567890" por tu número real con código de país (ej. 52 para México) -->
+            <a href="https://wa.me/7681112834?text=Hola%20Jose%20Luis,%20vi%20tu%20portafolio%20y%20me%20gustaría%20platicar%20sobre%20un%20proyecto" target="_blank" class="px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-lg transition-colors shadow-lg shadow-green-500/25">
+                Escribir por WhatsApp
+            </a>
+        </div>
+
+        <!-- Redes Sociales / Links Profesionales -->
+        <div class="mt-12 flex justify-center gap-8">
+            <!-- Pon tus links reales de GitHub y LinkedIn donde dice "#" -->
+            <a href="#" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors font-semibold">GitHub</a>
+            <a href="#" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors font-semibold">LinkedIn</a>
+        </div>
+        
+        <div class="mt-16 pt-8 border-t border-slate-800">
+            <p class="text-slate-500 text-sm">© 2026 Jose Luis DC. Ingeniería en Sistemas Computacionales.</p>
+        </div>
+    </div>
+</section>
